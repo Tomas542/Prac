@@ -50,11 +50,11 @@ public class Main {
                     check = false; //проверка на простое число
                     break;
                 }
-                }
-                if (check) {
-                    answer *= currentNum; //умножаем простые числа
-                    i ++;
-                }
+            }
+            if (check) {
+                answer *= currentNum; //умножаем простые числа
+                i ++;
+            }
             currentNum += 2;
         }
 
