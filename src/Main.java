@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(duplicates("foobar"));
         System.out.println(histogram(new int[] {1,10, 3}, '+'));
-        System.out.println(primorial(3));
+        System.out.println(primorial(8));
         System.out.println(capSpace("ILoveMyTeaPot"));
         System.out.println(isTriplet(12,13,5));
         System.out.println(littleBig(28));
@@ -41,15 +41,19 @@ public class Main {
         if (num == 0) {return 0;}
         int answer = 2; //первое простое число в задаче
         int currentNum = 3; // первое простое число после двух
-        boolean check = true;
+        int i = 1;
 
-        for (int i = 1; i < num; i++) {
+        while (i < num) {
+            boolean check = true;
             for (int j = 2; j < currentNum / 2; j++) {
-                if (currentNum % j == 0)
+                if (currentNum % j == 0){
                     check = false; //проверка на простое число
+                    break;
+                }
                 }
                 if (check) {
                     answer *= currentNum; //умножаем простые числа
+                    i ++;
                 }
             currentNum += 2;
         }
