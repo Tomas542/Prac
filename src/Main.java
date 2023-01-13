@@ -26,6 +26,7 @@ public class Main {
 
     public static String histogram (int[] num, char ch) {
         String str = "";
+
         for (int i = 0; i < num.length; i++) {
 
             for (int j = 0; j < num[i]; j++) {
@@ -34,11 +35,13 @@ public class Main {
 
             str += "\n"; //новая строка
         }
+
         return str;
     }
 
     public static int primorial(int num) {
         if (num == 0) {return 0;}
+
         int answer = 2; //первое простое число в задаче
         int currentNum = 3; // первое простое число после двух
         int i = 1;
@@ -87,10 +90,12 @@ public class Main {
     public static int littleBig (int num) {
         int little = 5;
         int big = 100;
+
         if (num % 2 == 0) { //чётные меняются как 100 * 2 ^ (num / 2 - 1)
             int n = num / 2 - 1;
             return big * (int)Math.pow(2, n);
         }
+
         else{ //нечётные меняются как 5 + num / 2
             return little + num / 2;
         }
